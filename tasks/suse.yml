@@ -1,0 +1,19 @@
+---
+
+- name: "Instalando os pacotes do Python 3"
+  zypper:
+    name: "{{ python_packages }}"
+    state: latest
+    update_cache: yes
+  become: true
+  tags:
+    - deps
+
+
+- name: "Instalando o Docker Compose"
+  pip:
+    name: docker-compose
+    state: latest
+  become: true
+  tags:
+    - docker-compose

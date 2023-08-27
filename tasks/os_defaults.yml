@@ -1,0 +1,5 @@
+---
+
+- debug: 
+    msg: Distribuição Linux não suportada
+  register: docker_compose_not_opensuse
